@@ -32,7 +32,7 @@ window.addEventListener('scroll', checkScroll);
 checkScroll();
 
 
-// --- Feature 3: Project Card Hover (from 'mouseover' / 'mouseout' events) ---
+//  Project Card Hover mouseover
 const projectCards = document.querySelectorAll('.project-card');
 
 projectCards.forEach(card => {
