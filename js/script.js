@@ -1,16 +1,13 @@
-/*
-  'defer' attribute in the <script> tag ensures this runs 
-  after the HTML document is fully parsed.
-*/
 
-// --- Feature 1: Dark Mode Toggle (from 'click' event) ---
+
+// Dark Mode Toggle 
 const themeToggle = document.getElementById('theme-toggle');
 themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
 });
 
 
-// --- Feature 2: Scroll Reveal (from 'scroll' event) ---
+// Scroll Reveal 
 // Select all elements with the .card class
 const scrollCards = document.querySelectorAll('.card');
 
