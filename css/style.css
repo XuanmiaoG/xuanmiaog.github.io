@@ -1,4 +1,4 @@
-/*Base Variables*/
+/* Base and Variables */
 :root {
     --bg-color-light: #ffffff;
     --text-color-light: #333;
@@ -22,12 +22,12 @@ body {
     padding: 0;
     background-color: var(--bg-color-light);
     color: var(--text-color-light);
-    /* Challenge Req 2: Transition for dark mode */
+    /* Transition for dark mode */
     transition: background-color 0.3s ease, color 0.3s ease;
     padding-top: 60px; /* Space for fixed navbar */
 }
 
-/*Dark Mode/
+/* 2. Dark Mode */
 body.dark-mode {
     background-color: var(--bg-color-dark);
     color: var(--text-color-dark);
@@ -40,7 +40,7 @@ body.dark-mode {
     padding: 20px 0;
 }
 
-/*Card Base for Scroll Reveal*/
+/* Card Base scroll  */
 .card {
     background-color: var(--card-bg-light);
     border: 1px solid #ddd;
@@ -48,7 +48,7 @@ body.dark-mode {
     box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     padding: 24px;
     
-    /* Challenge Req 4: "scroll reveal" initial state */
+    /* scroll reveal */
     opacity: 0;
     transform: translateY(30px);
     /* Challenge Req 2: Animation for scroll reveal */
@@ -61,7 +61,7 @@ body.dark-mode .card {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-/* scroll reveal */
+/* scroll reveal active state */
 .card.visible {
     opacity: 1;
     transform: translateY(0);
@@ -81,7 +81,7 @@ h2 {
     margin-bottom: 30px;
 }
 
-/* the Navbar Flexbox Layout */
+/* Navbar Flexbox Layout */
 .navbar {
     background-color: var(--card-bg-light);
     border-bottom: 1px solid #ddd;
@@ -96,7 +96,7 @@ body.dark-mode .navbar {
     background-color: var(--card-bg-dark);
     border-bottom-color: #333;
 }
-/* Challenge Req 3: Flexbox Layout */
+/* Flexbox Layout */
 .navbar .container {
     display: flex;
     justify-content: space-between;
@@ -132,7 +132,7 @@ body.dark-mode .nav-menu a {
     color: var(--primary-color);
 }
 
-/* 5. All Buttons (Generic Styles) */
+/* All Buttons  */
 #theme-toggle {
     background: none;
     border: 1px solid var(--grey-text);
@@ -140,13 +140,25 @@ body.dark-mode .nav-menu a {
     cursor: pointer;
     border-radius: 5px;
     padding: 5px 10px;
-    /* Add transition for the click effect */
-    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    
+    transition: background-color 0.3s ease, color 0.3s ease, 
+                transform 0.3s ease, box-shadow 0.3s ease;
 }
 body.dark-mode #theme-toggle {
     color: var(--text-color-dark);
     border-color: var(--grey-text);
 }
+
+
+#theme-toggle:hover {
+    background-color: #f0f0f0; /* Subtle grey background */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Add shadow */
+}
+body.dark-mode #theme-toggle:hover {
+    background-color: #333; /* Subtle dark background */
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1); /* Lighter shadow */
+}
+
 
 .btn {
     text-decoration: none;
@@ -169,6 +181,8 @@ body.dark-mode #theme-toggle {
 #theme-toggle:active {
     background-color: var(--primary-color);
     color: #fff;
+    /* !! UPDATED: Added shadow for "press in" effect */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); 
 }
 
 .btn-primary {
@@ -192,7 +206,7 @@ body.dark-mode #theme-toggle {
     color: #fff;
 }
 
-/* 6. Hero Section (Flexbox Layout) */
+/* Hero Section Flexbox Layout */
 .hero {
     background-color: var(--card-bg-light);
     min-height: 70vh;
@@ -248,7 +262,7 @@ body.dark-mode .social-links a {
     color: var(--primary-color);
 }
 
-/* 7. Experience */
+/* my experience */
 .experience-grid {
     display: grid; /* Using Grid for this layout */
     gap: 20px;
@@ -274,7 +288,7 @@ body.dark-mode .experience-card .company {
     line-height: 1.6;
 }
 
-/* 8. Education (Flexbox Layout) */
+/* Education Flexbox Layout */
 /* Challenge Req 3: Flexbox Layout */
 .education-card {
     display: flex;
@@ -308,7 +322,7 @@ body.dark-mode .experience-card .company {
     font-weight: bold;
 }
 
-/*Footer/
+/* 10. Footer */
 footer {
     background-color: var(--card-bg-light);
     border-top: 1px solid #ddd;
@@ -319,7 +333,7 @@ body.dark-mode footer {
     background-color: var(--card-bg-dark);
     border-top-color: #333;
 }
-/* Challenge Req 3: Flexbox Layout */
+/*  Flexbox Layout */
 .footer-content {
     display: flex;
     justify-content: space-between;
@@ -341,7 +355,7 @@ body.dark-mode .copyright {
     margin-right: 0;
 }
 
-/* Mobile responsive */
+/* Responsive on Mobile */
 @media (max-width: 768px) {
     body {
         padding-top: 50px;
