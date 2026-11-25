@@ -25,6 +25,16 @@
       </nav>
       <p class="bio">My research interests include <em>frontier AI, agentic coding, and scaling computing systems with AI agents</em>.</p>
       <p class="bio secondary">My recent work, <a href="https://infraben.ch/" target="_blank" rel="noopener noreferrer">InfraBench</a>, looks beyond whether an agent completes a task to examine how it behaves in real infrastructure.</p>
+      <div class="usage" id="usage" aria-labelledby="usage-title">
+        <div class="usage-head"><span id="usage-title"><span class="prompt">~/</span>agent usage</span><a href="https://www.viberank.app/profile/XuanmiaoG" target="_blank" rel="noopener noreferrer">viberank ↗</a></div>
+        <p class="usage-big"><span data-vr="tokens">105.3B</span> <small>tokens</small></p>
+        <dl class="usage-grid">
+          <div><dt>api cost</dt><dd data-vr="cost">$78.1K</dd></div>
+          <div><dt>days</dt><dd data-vr="days">84</dd></div>
+          <div><dt>rank</dt><dd data-vr="rank">#99</dd></div>
+        </dl>
+        <p class="usage-note"><span class="dot"></span><span data-vr="status">claude · codex · gemini</span></p>
+      </div>
     </header>
     <section class="news" id="news" aria-labelledby="news-title">
       <div class="section-heading"><h2 id="news-title"><span class="command">~/</span>News</h2><span class="section-note">RECENT UPDATES</span></div>
@@ -55,5 +65,17 @@
     </section>
     <footer><span>© 2026 Yuan Gao</span><a href="#about">back to top ↑</a></footer>
   </main>
+  <script>
+  // Live agent-usage stats from viberank (falls back to the numbers baked into the HTML).
+  (function(){
+    var fmt=function(n){var u=[[1e12,'T'],[1e9,'B'],[1e6,'M'],[1e3,'K']];for(var i=0;i<u.length;i++)if(n>=u[i][0])return (n/u[i][0]).toFixed(1).replace(/\.0$/,'')+u[i][1];return String(Math.round(n));};
+    var set=function(k,v){var el=document.querySelector('[data-vr="'+k+'"]');if(el&&v)el.textContent=v;};
+    fetch('https://www.viberank.app/api/profile/XuanmiaoG').then(function(r){return r.ok?r.json():null}).then(function(d){
+      if(!d||!d.totalTokens)return;
+      set('tokens',fmt(d.totalTokens));set('cost','$'+fmt(d.totalCost));set('days',String(d.daysTracked));set('rank','#'+d.rank);
+      set('status','live · '+new Date().toISOString().slice(0,10));
+    }).catch(function(){});
+  })();
+  </script>
 </body>
 </html>

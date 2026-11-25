@@ -27,3 +27,17 @@
 .blueprint{--bg:#0b1017;--fg:#dfe5ed;--muted:#8fa0b5;--accent:#92b8e4;--line:#293747;--font:'DM Sans',Arial,sans-serif}.blueprint main{max-width:930px;border-left:1px solid var(--line);border-right:1px solid var(--line);padding:50px 45px 28px}.blueprint .topline{max-width:930px;border-bottom:1px solid var(--line);padding-left:0;padding-right:0}.blueprint .identity{position:relative;border-bottom:1px solid var(--line);padding-bottom:35px;margin-bottom:40px}.blueprint h1{font-size:60px;letter-spacing:-.06em}.blueprint .eyebrow{color:var(--accent)}.blueprint .bio{max-width:660px}.blueprint h2{font:14px/1.5 var(--mono)}.blueprint .command{font-size:11px}.blueprint .news-list li{padding:15px 0;margin:0;border-bottom:1px solid var(--line);gap:30px;font-size:15px}.blueprint .news-list li:last-child{border-bottom:0}.blueprint .paper-meta{margin-top:30px}.blueprint h3{font-size:23px;font-weight:500}.blueprint .paper-summary{border-left:2px solid var(--accent);padding-left:18px}.blueprint footer{margin-top:25px}
 @media(max-width:650px){body{font-size:16px}.topline{padding:20px 22px;font-size:8px}main{padding:32px 22px 25px}.identity{margin-bottom:42px}h1{font-size:34px}.news-list li{grid-template-columns:1fr;gap:5px;margin-bottom:23px}.section-note{font-size:8px}h2{font-size:20px}.authors{font-size:13px}.paper-meta span:last-child{display:none}.noir main{padding-top:25px}.noir .identity{display:block;margin-bottom:45px}.noir h1{font-size:58px;max-width:none}.noir .field{max-width:none}.noir nav{margin:20px 0 28px}.noir .bio{font-size:21px}.noir .secondary{font-size:14px}.noir h2{font-size:25px}.noir h3{font-size:23px}.noir .news-list li{gap:8px}.graphite main{display:block;padding-top:25px}.graphite .identity{position:static;border-bottom:1px solid var(--line);padding-bottom:30px}.graphite .field{max-width:none}.graphite .bio{font-size:15px}.graphite .news-list li{grid-template-columns:1fr;gap:6px}.graphite .section-note{display:block}.console h1{font-size:34px}.console .paper{padding:17px}.amber .identity{padding:20px}.amber h1{font-size:30px}.amber .news-list li{grid-template-columns:1fr;gap:7px}.blueprint main{border:0;padding:25px 22px}.blueprint .topline{padding:20px 22px}.blueprint h1{font-size:45px}.blueprint .news-list li{grid-template-columns:1fr;gap:6px}.paper-actions{gap:18px}footer{margin-top:45px}nav{gap:18px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* Agent usage card (live from viberank). */
+.usage{margin-top:26px;border:1px solid var(--line);padding:14px 16px 12px;font:10px/1.6 var(--mono);color:var(--muted)}
+.usage-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;letter-spacing:.06em;margin-bottom:10px}
+.usage-head .prompt{margin-right:6px}
+.usage-head a{color:var(--accent);text-decoration:none}
+.usage-big{margin:0 0 10px;font:34px/1.1 Georgia,serif;color:var(--fg);letter-spacing:-.02em}
+.usage-big small{font:10px/1 var(--mono);color:var(--muted);letter-spacing:.08em;margin-left:4px}
+.usage-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0 0 10px;padding-top:10px;border-top:1px solid var(--line)}
+.usage-grid dt{font-size:9px;letter-spacing:.08em;color:var(--muted)}
+.usage-grid dd{margin:0;font-size:13px;color:var(--fg)}
+.usage-note{margin:0;font-size:9px;letter-spacing:.06em}
+.usage-note .dot{margin:0 8px 0 0;vertical-align:1px}
+@media(max-width:650px){.usage{max-width:360px}}
